@@ -21,11 +21,9 @@ export const PetsForm = () => {
   return (
     <React.Fragment>
       <form onSubmit={submitPetsData}>
-        <label htmlFor='petName' className='employee-labels'>
-          Nombre Mascota
-        </label>
+        <label htmlFor='petName'>Nombre Mascota</label>
         <input
-          type='number'
+          type='text'
           name='petName'
           onChange={(e) => {
             // console.log(e.target.value);
@@ -42,6 +40,56 @@ export const PetsForm = () => {
             console.log(e.target.value);
           }}
           value={petData.age}
+        />
+        <br />
+        <label htmlFor='breed'>Raza</label>
+        <input
+          type='text'
+          name='breed'
+          onChange={(e) => {
+            // console.log(e.target.value);
+          }}
+          value={petData.breed}
+        />
+        <br />
+        <label htmlFor='color'>Color</label>
+        <input
+          type='text'
+          name='color'
+          onChange={(e) => {
+            // console.log(e.target.value);
+          }}
+          value={petData.color}
+        />
+        <br />
+        <label htmlFor='address'>Dirección</label>
+        <input
+          type='text'
+          name='address'
+          onChange={(e) => {
+            // console.log(e.target.value);
+          }}
+          value={petData.address}
+        />
+        <br />
+        <label htmlFor='ownerName'>Nombre Dueño</label>
+        <input
+          type='text'
+          name='ownerName'
+          onChange={(e) => {
+            // console.log(e.target.value);
+          }}
+          value={petData.ownerName}
+        />
+        <br />
+        <label htmlFor='tel'>Teléfono</label>
+        <input
+          type='text'
+          name='tel'
+          onChange={(e) => {
+            // console.log(e.target.value);
+          }}
+          value={petData.tel}
         />
         <br />
 
