@@ -96,8 +96,12 @@ export const PetsForm = () => {
         <br />
         <br />
         <section className='buttons-section'>
-          <input type='submit' value='Calcular' onClick={submitPetsData} className='buttons' />
-          <input type='button' value='Limpiar' onClick={clearSearch} className='buttons' />
+          <input
+            type='submit'
+            value='Descargar Excel'
+            onClick={submitPetsData}
+            className='buttons'
+          />
         </section>
       </form>
 
