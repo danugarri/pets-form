@@ -4,6 +4,7 @@ import { ExportToExcel } from '../ExportToExcel/ExportToExcel';
 import image from '../../utils/formulario-modificado.png';
 import { postPets } from '../../services/postPets';
 import { useForm } from '../../hooks/useForm';
+import { initialState } from './const.js';
 
 export const PetsForm = () => {
   const [petData, changePetData] = useForm();
@@ -14,9 +15,10 @@ export const PetsForm = () => {
     clearSearch();
   };
   const downloadFile = () => {
-    postPets(petData).then((response) => {
-      window.open(response.data, '_self');
-    });
+    petData !== initialState &&
+      postPets(petData).then((response) => {
+        window.open(response.data, '_self');
+      });
   };
   const clearSearch = () => {
     changePetData(null, 'clear');
