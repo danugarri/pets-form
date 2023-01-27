@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export const useForm = () => {
-  const [petData, setPetData] = useState({
+  const initialState = {
     petName: '',
     age: undefined,
     breed: '',
@@ -9,9 +9,12 @@ export const useForm = () => {
     address: '',
     ownerName: '',
     tel: undefined,
-  });
-  const changePetData = (e) => {
-    setPetData({ ...petData, [e.target.name]: e.target.value });
+  };
+  const [petData, setPetData] = useState(initialState);
+  const changePetData = (e, option) => {
+    option === 'clear'
+      ? setPetData(initialState)
+      : setPetData({ ...petData, [e.target.name]: e.target.value });
   };
   return [petData, changePetData];
 };
