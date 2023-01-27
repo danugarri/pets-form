@@ -11,17 +11,27 @@ export const PetsForm = () => {
   const { petName, age, breed, color, address, ownerName, tel } = petData;
   const submitPetsData = (e) => {
     e.preventDefault();
-    downloadFile();
-    clearSearch();
+    const validation = validateForm();
+    if (validation) {
+      downloadFile();
+      clearSearch();
+    }
   };
   const downloadFile = () => {
-    petData !== initialState &&
-      postPets(petData).then((response) => {
-        window.open(response.data, '_self');
-      });
+    postPets(petData).then((response) => {
+      window.open(response.data, '_self');
+    });
   };
   const clearSearch = () => {
     changePetData(null, 'clear');
+  };
+  const validateForm = () => {
+    const validation = petData !== initialState && petName !== '';
+    if (validation) {
+      return true;
+    } else {
+      return false;
+    }
   };
 
   return (
@@ -30,7 +40,14 @@ export const PetsForm = () => {
 
       <form onSubmit={submitPetsData} className='form'>
         <label htmlFor='petName'>Nombre Mascota</label>
-        <input type='text' name='petName' onChange={changePetData} value={petName} autoFocus />
+        <input
+          required
+          type='text'
+          name='petName'
+          onChange={changePetData}
+          value={petName}
+          autoFocus
+        />
         <br />
         <label htmlFor='age'>Edad</label>
         <input type='number' name='age' onChange={changePetData} value={age} />
