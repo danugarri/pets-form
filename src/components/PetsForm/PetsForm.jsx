@@ -3,20 +3,10 @@ import './PetsForm.css';
 import { ExportToExcel } from '../ExportToExcel/ExportToExcel';
 import image from '../../utils/formulario-modificado.png';
 import { postPets } from '../../services/postPets';
+import { useForm } from '../../hooks/useForm';
 
 export const PetsForm = () => {
-  const [petData, setPetData] = useState({
-    petName: '',
-    age: undefined,
-    breed: '',
-    color: '',
-    address: '',
-    ownerName: '',
-    tel: undefined,
-  });
-  const changePetData = (e) => {
-    setPetData({ ...petData, [e.target.name]: e.target.value });
-  };
+  const [petData, changePetData] = useForm();
   const submitPetsData = (e) => {
     e.preventDefault();
     downloadFile();
