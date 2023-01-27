@@ -21,8 +21,9 @@ export const PetsForm = () => {
     //   This part can be optional
   };
   return (
-    <div className='pets'>
+    <React.Fragment>
       <img src={image} alt='form-background' className='image' />
+
       <form onSubmit={submitPetsData} className='form'>
         <label htmlFor='petName'>Nombre Mascota</label>
         <input
@@ -94,20 +95,8 @@ export const PetsForm = () => {
           }}
           value={petData.tel}
         />
-        <br />
-
-        <br />
-        <br />
-        <section className='buttons-section'>
-          <input
-            type='submit'
-            value='Descargar Excel'
-            onClick={submitPetsData}
-            className='buttons'
-          />
-          <ExportToExcel bodyData={petData} />
-        </section>
+        <ExportToExcel bodyData={petData} onClick={submitPetsData} />
       </form>
-    </div>
+    </React.Fragment>
   );
 };

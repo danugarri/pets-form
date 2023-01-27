@@ -1,0 +1,8 @@
+.downloadIcon {
+  position: Absolute;
+  color: rgb(128, 78, 12);
+
+  z-index: 1;
+  top: 50vh;
+  right: 8vw;
+}
