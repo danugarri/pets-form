@@ -14,3 +14,11 @@
   right: 8vw;
   cursor: pointer;
 }
+.disabled-icon {
+  position: Absolute;
+  color: rgb(112, 103, 92);
+  z-index: 1;
+  top: 50vh;
+  right: 8vw;
+  pointer-events: none;
+}
