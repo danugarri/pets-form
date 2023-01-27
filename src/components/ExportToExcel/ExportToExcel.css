@@ -4,4 +4,13 @@
   z-index: 1;
   top: 50vh;
   right: 8vw;
+  cursor: pointer;
+}
+.downloadIcon:hover {
+  position: Absolute;
+  color: rgb(180, 128, 60);
+  z-index: 1;
+  top: 50vh;
+  right: 8vw;
+  cursor: pointer;
 }
