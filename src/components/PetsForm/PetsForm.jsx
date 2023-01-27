@@ -14,6 +14,9 @@ export const PetsForm = () => {
     ownerName: '',
     tel: undefined,
   });
+  const changePetData = (e) => {
+    setPetData({ ...petData, [e.target.name]: e.target.value });
+  };
   const submitPetsData = (e) => {
     e.preventDefault();
     downloadFile();
@@ -35,79 +38,29 @@ export const PetsForm = () => {
         <input
           type='text'
           name='petName'
-          onChange={(e) => {
-            // console.log(e.target.value);
-            setPetData({ ...petData, petName: e.target.value });
-          }}
+          onChange={changePetData}
           // value={petData.petName}
           autoFocus
         />
         <br />
         <label htmlFor='age'>Edad</label>
-        <input
-          type='number'
-          name='age'
-          onChange={(e) => {
-            console.log(e.target.value);
-            setPetData({ ...petData, age: e.target.value });
-          }}
-          value={petData.age}
-        />
+        <input type='number' name='age' onChange={changePetData} value={petData.age} />
         <br />
         <label htmlFor='breed'>Raza</label>
-        <input
-          type='text'
-          name='breed'
-          onChange={(e) => {
-            // console.log(e.target.value);
-            setPetData({ ...petData, breed: e.target.value });
-          }}
-          value={petData.breed}
-        />
+        <input type='text' name='breed' onChange={changePetData} value={petData.breed} />
         <br />
         <label htmlFor='color'>Color</label>
-        <input
-          type='text'
-          name='color'
-          onChange={(e) => {
-            // console.log(e.target.value);
-            setPetData({ ...petData, color: e.target.value });
-          }}
-          value={petData.color}
-        />
+        <input type='text' name='color' onChange={changePetData} value={petData.color} />
         <br />
         <label htmlFor='address'>Dirección</label>
-        <input
-          type='text'
-          name='address'
-          onChange={(e) => {
-            // console.log(e.target.value);
-            setPetData({ ...petData, address: e.target.value });
-          }}
-          value={petData.address}
-        />
+        <input type='text' name='address' onChange={changePetData} value={petData.address} />
         <br />
         <label htmlFor='ownerName'>Nombre Dueño</label>
-        <input
-          type='text'
-          name='ownerName'
-          onChange={(e) => {
-            // console.log(e.target.value);
-            setPetData({ ...petData, ownerName: e.target.value });
-          }}
-          value={petData.ownerName}
-        />
+        <input type='text' name='ownerName' onChange={changePetData} value={petData.ownerName} />
         <br />
         <label htmlFor='tel'>Teléfono</label>
-        <input
-          type='text'
-          name='tel'
-          onChange={(e) => {
-            // console.log(e.target.value);
-            setPetData({ ...petData, tel: e.target.value });
-          }}
-          value={petData.tel}
-        />
+        <input type='text' name='tel' onChange={changePetData} value={petData.tel} />
+
         <ExportToExcel bodyData={petData} submitPetsData={submitPetsData} />
       </form>
     </React.Fragment>
