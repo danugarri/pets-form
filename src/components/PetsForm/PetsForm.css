@@ -1,0 +1,26 @@
+.pets {
+  background-color: rgba(165, 42, 42, 0.596);
+  text-align: justify;
+  width: 40vw;
+  margin: 0 auto;
+  /* padding: 1rem; */
+  border-radius: 25px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin-top: 11rem;
+  left: 40%;
+  z-index: 1;
+  position: absolute;
+}
+.image {
+  width: 53vw;
+  height: 120vh;
+  position: absolute;
+  left: 20%;
+}
+input {
+  width: 12vw;
+}

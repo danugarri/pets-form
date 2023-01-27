@@ -1,10 +1,5 @@
-
-import './App.css';
 import { PetsForm } from './components/PetsForm/PetsForm';
-
-function App() {
- <PetsForm />
- 
-}
+import './App.css';
+export const App = () => <PetsForm />;
 
 export default App;

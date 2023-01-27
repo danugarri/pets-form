@@ -1,11 +1,10 @@
-import { postData } from '../../services/postData';
 import DownloadIcon from '@mui/icons-material/Download';
-import './ExportToExcel.css';
+import { postPets } from '../../services/postPets';
 
 export const ExportToExcel = ({ bodyData }) => {
   const downloadFile = () => {
     if (bodyData.length > 0) {
-      postData(bodyData).then((response) => {
+      postPets(bodyData).then((response) => {
         window.open(response.data, '_self');
       });
     }

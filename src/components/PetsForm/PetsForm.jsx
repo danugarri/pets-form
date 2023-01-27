@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import './PetsForm.css';
 import { ExportToExcel } from '../ExportToExcel/ExportToExcel';
+import image from '../../utils/formulario-modificado.png';
 
 export const PetsForm = () => {
   const [petData, setPetData] = useState({
@@ -19,8 +21,9 @@ export const PetsForm = () => {
     //   This part can be optional
   };
   return (
-    <React.Fragment>
-      <form onSubmit={submitPetsData}>
+    <div className='pets'>
+      <img src={image} alt='form-background' className='image' />
+      <form onSubmit={submitPetsData} className='form'>
         <label htmlFor='petName'>Nombre Mascota</label>
         <input
           type='text'
@@ -102,10 +105,9 @@ export const PetsForm = () => {
             onClick={submitPetsData}
             className='buttons'
           />
+          <ExportToExcel bodyData={petData} />
         </section>
       </form>
-
-      <ExportToExcel bodyData={petData} />
-    </React.Fragment>
+    </div>
   );
 };
