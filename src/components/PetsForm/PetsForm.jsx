@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './PetsForm.css';
 import { ExportToExcel } from '../ExportToExcel/ExportToExcel';
 import image from '../../utils/formulario-modificado.png';
 import { postPets } from '../../services/postPets';
 import { useForm } from '../../hooks/useForm';
 import { initialState } from './const.js';
+import { Warning } from '../warning/Warning';
 
 export const PetsForm = () => {
   const [petData, changePetData] = useForm();
   const { petName, age, breed, color, address, ownerName, tel } = petData;
+  const [warning, setWarning] = useState(false);
   const submitPetsData = (e) => {
     e.preventDefault();
     const validation = validateForm();
     if (validation) {
       downloadFile();
       clearSearch();
+      setWarning(false);
+    } else {
+      setWarning(true);
     }
   };
   const downloadFile = () => {
@@ -48,6 +53,7 @@ export const PetsForm = () => {
           value={petName}
           autoFocus
         />
+        <Warning error={warning} />
         <br />
         <label htmlFor='age'>Edad</label>
         <input type='number' name='age' onChange={changePetData} value={age} />
