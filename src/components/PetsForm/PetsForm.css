@@ -16,3 +16,26 @@
 input {
   width: 12vw;
 }
+
+/* Media queries */
+
+@media only screen and (max-width: 500px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin-top: 11rem;
+    left: 40%;
+    z-index: 1;
+    position: absolute;
+  }
+  .image {
+    width: 70vw;
+    height: 120vh;
+    position: absolute;
+    left: 20%;
+  }
+  input {
+    width: 12vw;
+  }
+}

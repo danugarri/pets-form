@@ -1,4 +1,16 @@
 body {
   background-color: #fff47b;
   overflow-y: hidden;
+  font-size: 1rem;
+}
+@media only screen and (max-width: 560px) {
+  body {
+    background-color: #fff47b;
+    overflow-y: hidden;
+    font-size: 0.75rem;
+  }
+  label {
+    position: relative;
+    left: 0rem;
+  }
 }
