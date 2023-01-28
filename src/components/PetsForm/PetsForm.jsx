@@ -22,6 +22,7 @@ export const PetsForm = () => {
       setWarning(true);
     }
   };
+  console.log(petData);
   const downloadFile = () => {
     postPets(petData).then((response) => {
       window.open(response.data, '_self');
