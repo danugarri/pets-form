@@ -19,7 +19,7 @@ input {
 
 /* Media queries */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 200px) and (max-width: 500px) {
   .form {
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@ input {
     width: 12vw;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 500px) and (max-width: 900px) {
   .form {
     display: flex;
     flex-direction: column;
