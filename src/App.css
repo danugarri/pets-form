@@ -6,6 +6,7 @@ body {
 @media only screen and (max-width: 560px) {
   body {
     background-color: #fff47b;
+    overflow-y: scroll;
     font-size: 0.8rem;
   }
   label {
