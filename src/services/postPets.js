@@ -1,7 +1,7 @@
 export const postPets = async (bodyData) => {
-  const initialUrl = 'http://localhost:5000';
+  // const initialUrl = 'http://localhost:5000';
   const deployedUrl = 'https://pets-excel-filewriter.onrender.com';
-  const response = await fetch(initialUrl, {
+  const response = await fetch(deployedUrl, {
     body: JSON.stringify(bodyData),
     method: 'POST',
     headers: {
