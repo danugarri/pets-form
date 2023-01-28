@@ -25,7 +25,27 @@ input {
     flex-direction: column;
     width: 30vw;
     margin-top: 11rem;
-    left: 40%;
+    left: 45%;
+    z-index: 1;
+    position: absolute;
+  }
+  .image {
+    width: 70vw;
+    height: 120vh;
+    position: absolute;
+    left: 20%;
+  }
+  input {
+    width: 12vw;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin-top: 11rem;
+    left: 45%;
     z-index: 1;
     position: absolute;
   }

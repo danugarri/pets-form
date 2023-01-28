@@ -36,3 +36,31 @@
   animation-duration: 1s;
   animation-iteration-count: 3;
 }
+
+/* media queries */
+@media only screen and (max-width: 900px) {
+  .downloadIcon {
+    position: Absolute;
+    color: rgb(128, 78, 12);
+    z-index: 1;
+    top: 50vh;
+    right: 3vw;
+    cursor: pointer;
+  }
+  .downloadIcon:hover {
+    position: Absolute;
+    color: rgb(180, 128, 60);
+    z-index: 1;
+    top: 50vh;
+    right: 3vw;
+    cursor: pointer;
+  }
+  .disabled-icon {
+    position: Absolute;
+    color: rgb(112, 103, 92);
+    z-index: 1;
+    top: 50vh;
+    right: 3vw;
+    pointer-events: none;
+  }
+}
