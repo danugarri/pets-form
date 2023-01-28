@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './PetsForm.css';
 import { ExportToExcel } from '../ExportToExcel/ExportToExcel';
-import image from '../../utils/formulario-modificado.png';
+import image from '../../assets/formulario-modificado.png';
 import { postPets } from '../../services/postPets';
 import { useForm } from '../../hooks/useForm';
 import { initialState } from './const.js';

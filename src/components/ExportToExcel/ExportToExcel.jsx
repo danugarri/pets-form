@@ -8,7 +8,7 @@ export const ExportToExcel = ({ bodyData, submitPetsData }) => {
 
   useEffect(() => {
     const handleIconStyle = () => {
-      bodyData !== initialState ? setStyle('downloadIcon') : setStyle('disabled-icon');
+      bodyData !== initialState ? setStyle('downloadIcon enabled-icon') : setStyle('disabled-icon');
     };
     handleIconStyle();
   }, [bodyData]);

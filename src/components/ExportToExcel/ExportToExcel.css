@@ -22,3 +22,16 @@
   right: 8vw;
   pointer-events: none;
 }
+/* Keyframe to handle enabled icon */
+@keyframes enabledIcon {
+  from {
+    transform: scale(0.25, 0.25);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+.enabled-icon {
+  animation-name: enabledIcon;
+  animation-duration: 1s;
+}
